@@ -21,7 +21,10 @@ public class Main {
                 map.put(key, 1);
             }
         }
-        System.out.println(csv);
-        System.out.println(map.keySet());
+//        System.out.println(csv);
+        List <String> newCsv = new ArrayList<>(map.keySet());
+        for (int i = 0; i < newCsv.size(); i++) {
+            System.out.println(newCsv.get(i));
+        }
     }
 }
