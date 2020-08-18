@@ -47,27 +47,30 @@ public class IssuanceRepayment {
         List<Loan> questions = new ArrayList<>();
 
         for (int i = 0; i < loanFirstIssuance.size(); i++) {
-            if (loanFirstIssuance.get(i).getSum().startsWith("-")) {
+            String fio = loanFirstIssuance.get(i).getFio();
+            String sum = loanFirstIssuance.get(i).getSum();
+            if (sum.startsWith("-")) {
                 repayment.add(loanFirstIssuance.get(i));
             } else
-                if (mapFirstIssuance.containsKey(loanFirstIssuance.get(i).getFio()) &&
-                        mapFirstRepayment.containsKey(loanFirstIssuance.get(i).getFio())
-                        && mapFirstIssuance.get(loanFirstIssuance.get(i).getFio()).
-                        equals(mapFirstRepayment.get(loanFirstIssuance.get(i).getFio()))) {
+                if (mapFirstIssuance.containsKey(fio) &&
+                        mapFirstRepayment.containsKey(fio)
+                        && mapFirstIssuance.get(fio).
+                        equals(mapFirstRepayment.get(fio))) {
 
                 } else
-                if (mapFirstIssuance.containsKey(loanFirstIssuance.get(i).getFio()) &&
-                        mapFirstRepayment.containsKey(loanFirstIssuance.get(i).getFio())
-                        && !mapFirstIssuance.get(loanFirstIssuance.get(i).getFio()).
-                        equals(mapFirstRepayment.get(loanFirstIssuance.get(i).getFio()))) {
+                if (mapFirstIssuance.containsKey(fio) &&
+                        mapFirstRepayment.containsKey(fio)
+                        && !mapFirstIssuance.get(fio).
+                        equals(mapFirstRepayment.get(fio))) {
                     questions.add(loanFirstIssuance.get(i));
                 } else {
                     issuance.add(loanFirstIssuance.get(i));
                 }
             }
         for (int i = 0; i < loanFirstRepayment.size(); i++) {
-            if (mapFirstIssuance.containsKey(loanFirstRepayment.get(i).getFio()) &&
-                    mapFirstRepayment.containsKey(loanFirstRepayment.get(i).getFio())) {
+            String fio = loanFirstRepayment.get(i).getFio();
+            if (mapFirstIssuance.containsKey(fio) &&
+                    mapFirstRepayment.containsKey(fio)) {
             } else {
                 repayment.add(loanFirstRepayment.get(i));
             }
