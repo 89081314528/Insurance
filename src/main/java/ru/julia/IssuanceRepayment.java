@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * в исходных файлах не может быть дублей
+ */
 public class IssuanceRepayment {
     public static void main(String[] args) throws IOException {
         List<String> firstIssuance = Files.lines(new File("76.10.csv").toPath())

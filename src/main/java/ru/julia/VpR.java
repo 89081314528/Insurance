@@ -32,34 +32,9 @@ public class VpR {
             String[] loan = line.split(";");
             mfo.add(new Loan(loan[0], loan[1]));
         }
-//        List<Loan> buhSvod = buhSvod(buh);
-//        PrintStream csv = new PrintStream("resultVpR");
-//        for (int i = 0; i < buhSvod.size(); i++) {
-//            csv.println(buhSvod.get(i).getFio() + ";" + buhSvod.get(i).getSum());
-//        }
+        vpr(buh, mfo);
     }
 
-//    public static List<Loan> buhSvod(List<Loan> buh) {
-//        List<Loan> buhSvod = new ArrayList<>();
-//        buhSvod.add(buh.get(0));
-//        for (int i = 1; i < buh.size(); i++) {
-//            String buhFio = buh.get(i).getFio();
-//            for (int j = 0; j < buhSvod.size(); j++) {
-//                String buhSvodFio = buhSvod.get(j).getFio();
-//                if (buhFio.equals(buhSvodFio)) {
-//                    String a = Integer.toString(Integer.parseInt(buhSvod.get(j).getSum()) + Integer.parseInt(buh.get(i).getSum()));
-//                    buhSvod.get(j).withDetermineSum(a);
-//                    System.out.println("da");
-//                    break;
-//                } else {
-//                    if (j == buhSvod.size() - 1) {
-//                        buhSvod.add(buh.get(i));
-//                    }
-//                }
-//            }
-//        }
-//        return buhSvod;
-//    }
 
     public static void vpr(List<Loan> buh, List<Loan> mfo) throws FileNotFoundException {
         List<ResultVpR> resultVpRs = new ArrayList<>();
