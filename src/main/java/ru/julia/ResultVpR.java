@@ -1,11 +1,12 @@
 package ru.julia;
 
-public class ResaltVPR {
+public class ResultVpR {
+
     private final Loan buhLoan;
     private final Loan mfoLoan;
 
 
-    public ResaltVPR(Loan buhLoan, Loan mfoLoan) {
+    public ResultVpR(Loan buhLoan, Loan mfoLoan) {
         this.buhLoan = buhLoan;
         this.mfoLoan = mfoLoan;
     }

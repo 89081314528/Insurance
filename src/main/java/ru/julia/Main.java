@@ -6,6 +6,9 @@ import java.nio.file.Files;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * убрать полные дубли (строки, которые полностью совпадают друг с другом)
+ */
 public class Main {
     public static void main(String[] args) throws IOException {
         List<String> csv = Files.lines(new File("person.csv").toPath())
