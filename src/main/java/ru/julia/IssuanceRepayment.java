@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
+ * обрабатывает анализ счета 76.09 с выдачами и возвратами и создает три файла:
+ * - выдачи, возвраты и файл с вопросами.
  * в исходных файлах не может быть дублей
  */
 public class IssuanceRepayment {
