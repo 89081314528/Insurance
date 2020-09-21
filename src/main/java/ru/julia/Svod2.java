@@ -3,6 +3,7 @@ package ru.julia;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -42,6 +43,10 @@ public class Svod2 {
                 mapBuh.put(fio, sum);
             }
         }
-        System.out.println(mapBuh.entrySet());
+        List <Map.Entry<String, String>> list = new ArrayList<>(mapBuh.entrySet());
+        PrintStream csv = new PrintStream("resultSvod2");
+        for (int i = 0; i < list.size(); i++) {
+            csv.println((list.get(i).getKey() + ";" + list.get(i).getValue()));
+        }
     }
 }
