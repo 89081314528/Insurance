@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 /**
  * Сводная таблица. Суммирует значения для строк с одинаковой фамилией
+ * Используя 2 вложенных цикла
  */
 public class Svod {
     public static void main(String[] args) throws IOException {
